@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: sleepybox
+  name: sleepybox
+spec:
+  containers:
+  - args:
+    - sleep
+    - "3600"
+    image: busybox
+    name: sleepybox
+    resources: {}
+  dnsPolicy: ClusterFirst
+  securityContext:
+    fsGroup: 2000
+  restartPolicy: Always
+status: {}

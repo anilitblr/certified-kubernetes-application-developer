@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: allaccess
+  name: allaccess
+spec:
+  containers:
+  - args:
+    - sleep
+    - "3600"
+    image: busybox
+    name: allaccess
+    resources: {}
+  serviceAccount: allaccess
+  serviceAccountName: allaccess    
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
